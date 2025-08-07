@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn languages through fun interactive stories and games designed for kids. Become bilingual with engaging adventures!">
+    <title>Babbling Economy | Interactive Language Learning Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">Babbling <span>Economy</span></h1>
+            <div class="language-selector">
+                <button id="language-toggle" class="language-toggle">🇪🇸 Español</button>
+            </div>
+            <div id="score-display" class="score">Words Learned: 0</div>
+            <div id="achievement-badge" class="achievement-badge" style="display: none;">🏆</div>
+        </header>
+
+        <main id="main-content">
+            <div class="image-container">
+                <img id="story-image" alt="Story scene" class="story-image">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div id="situation-text" class="situation"></div>
+            <div id="translation-text" class="translation"></div>
+
+            <div id="loading-indicator" class="loading">Loading...</div>
+
+            <div id="choices" class="choice-container"></div>
+        </main>
+
+        <div id="end-screen" class="end-screen" style="display: none;">
+            <div id="end-text" class="end-text"></div>
+            <div class="vocabulary-summary">
+                <h3>Words You Learned:</h3>
+                <div id="vocabulary-list" class="vocabulary-list"></div>
+            </div>
+            <div class="achievement-summary">
+                <h3>🏆 Achievements Unlocked:</h3>
+                <div id="achievements-list" class="achievements-list"></div>
+            </div>
+            <div class="end-images">
+                <img id="manga-image" alt="Story manga" class="manga-image">
+                <img id="summary-image" alt="Story summary" class="summary-image">
+            </div>
+        </div>
+
+        <!-- Add modal dialog for sharing -->
+        <div id="share-modal" class="share-modal" style="display: none;">
+            <div class="share-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Your Babbling Economy Journey</h2>
+                <div class="share-image-container">
+                    <img id="share-manga-image" alt="Shareable manga story" class="share-manga-image">
+                    <div id="share-loading" class="loading">Generating your story...</div>
+                </div>
+                <div class="share-actions">
+                    <button id="download-image" class="action-button download-button">Download Image</button>
+                    <button id="copy-image" class="action-button copy-button">Copy Image</button>
+                    <button id="share-twitter" class="action-button social-button twitter-button">Share on
+                        Twitter</button>
+                    <button id="share-facebook" class="action-button social-button facebook-button">Share on
+                        Facebook</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🌍 Babbling Economy</h4>
+                    <p>Empowering kids to become global citizens through interactive language learning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🎯 Learning Goals</h4>
+                    <ul>
+                        <li>Master 8 languages</li>
+                        <li>Build digital vocabulary</li>
+                        <li>Unlock achievements</li>
+                        <li>Share your progress</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🚀 Ready to Learn?</h4>
+                    <p>Start your language adventure today and join the Babbling Economy!</p>
+                    <div class="footer-stats">
+                        <span>📚 50+ Vocabulary Words</span>
+                        <span>🏆 6 Achievement Badges</span>
+                        <span>🌍 8 Languages Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Babbling Economy | Building the future of language learning
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
